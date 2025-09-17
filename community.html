@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Programs</title>
+    <link rel="stylesheet" href="tutorialmanagements.css">
+</head>
+
+<body>
+    <header>
+        <div class="Logo">E-Ways</div>
+        <nav>
+            <a href="maindashboard.html">Home</a>
+            <a href="tutorialmanagement.html" class="active">Tutorial</a>
+            <a href="marketplace.html">Market</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="help.html">Help</a>
+        </nav>
+        <div class="actions">
+            <div class="Profile"><a href="userprofile.html">Profile</a></div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h3>Community Programs</h3>
+            <ul>
+                <li><a href="#school">School Programs</a></li>
+                <li><a href="#barangay">Barangay Drives</a></li>
+                <li><a href="#partnerships">Partnerships</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="school">
+                <h2>School Programs</h2>
+                <p>Students and teachers participate in collection and awareness campaigns.</p>
+            </section>
+
+            <section id="barangay">
+                <h2>Barangay Drives</h2>
+                <p>Local community events encourage proper e-waste disposal.</p>
+            </section>
+
+            <section id="partnerships">
+                <h2>Partnerships</h2>
+                <p>Collaboration with NGOs and recycling companies for large-scale programs.</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function logout() {
+            sessionStorage.clear();
+            localStorage.clear();
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

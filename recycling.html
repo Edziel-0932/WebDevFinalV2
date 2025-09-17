@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycling Techniques</title>
+  <link rel="stylesheet" href="tutorialmanagements.css">
+</head>
+<body>
+  <header>
+    <div class="Logo">E-Ways</div>
+    <nav>
+      <a href="maindashboard.html">Home</a>
+      <a href="tutorialmanagement.html" class="active">Tutorial</a>
+      <a href="marketplace.html">Market</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="actions">
+      <div class="Profile"><a href="userprofile.html">Profile</a></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>Recycling Processes</h3>
+      <ul>
+        <li><a href="#mechanical">Mechanical Recycling</a></li>
+        <li><a href="#chemical">Chemical Recycling</a></li>
+        <li><a href="#reuse">Reuse & Repurposing</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section id="mechanical">
+        <h2>Mechanical Recycling</h2>
+        <p>Shredding and grinding e-waste into raw materials.</p>
+      </section>
+
+      <section id="chemical">
+        <h2>Chemical Recycling</h2>
+        <p>Using chemical processes to recover precious metals like gold and copper.</p>
+      </section>
+
+      <section id="reuse">
+        <h2>Reuse & Repurposing</h2>
+        <p>Repairing devices or repurposing parts for new applications.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function logout() {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dismantling Techniques</title>
+  <link rel="stylesheet" href="tutorialmanagements.css">
+</head>
+<body>
+  <header>
+    <div class="Logo">E-Ways</div>
+    <nav>
+      <a href="maindashboard.html">Home</a>
+      <a href="tutorialmanagement.html" class="active">Tutorial</a>
+      <a href="marketplace.html">Market</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="actions">
+      <div class="Profile"><a href="userprofile.html">Profile</a></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Dismantling Types</h3>
+      <ul>
+        <li><a href="#manual">Manual Dismantling</a></li>
+        <li><a href="#semi">Semi-Automated Dismantling</a></li>
+        <li><a href="#automated">Automated Dismantling</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="manual">
+        <h2>Manual Dismantling</h2>
+        <p>This involves workers physically separating components by hand, using basic tools like screwdrivers, pliers, and cutters.</p>
+        <ul>
+          <li>Low-cost method</li>
+          <li>Requires safety precautions (gloves, goggles)</li>
+          <li>Time-consuming but flexible for different devices</li>
+        </ul>
+      </section>
+
+      <section id="semi">
+        <h2>Semi-Automated Dismantling</h2>
+        <p>Combines human effort with machinery for efficiency. Machines help remove specific parts, while workers handle the rest.</p>
+        <ul>
+          <li>Speeds up dismantling process</li>
+          <li>Safer handling of hazardous components</li>
+          <li>Requires training and equipment</li>
+        </ul>
+      </section>
+
+      <section id="automated">
+        <h2>Automated Dismantling</h2>
+        <p>Uses specialized machines and robotics to completely dismantle electronic waste without human intervention.</p>
+        <ul>
+          <li>Fast and consistent results</li>
+          <li>High initial cost for setup</li>
+          <li>Best for large-scale recycling plants</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function logout() {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

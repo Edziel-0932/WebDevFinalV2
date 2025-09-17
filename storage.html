@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Techniques</title>
+  <link rel="stylesheet" href="tutorialmanagements.css">
+</head>
+<body>
+  <header>
+    <div class="Logo">E-Ways</div>
+    <nav>
+      <a href="maindashboard.html">Home</a>
+      <a href="tutorialmanagement.html" class="active">Tutorial</a>
+      <a href="marketplace.html">Market</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="actions">
+      <div class="Profile"><a href="userprofile.html">Profile</a></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>Storage Methods</h3>
+      <ul>
+        <li><a href="#short-term">Short-Term Storage</a></li>
+        <li><a href="#long-term">Long-Term Storage</a></li>
+        <li><a href="#hazardous">Hazardous Storage</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section id="short-term">
+        <h2>Short-Term Storage</h2>
+        <p>Temporary storage in labeled bins or boxes until collection.</p>
+      </section>
+
+      <section id="long-term">
+        <h2>Long-Term Storage</h2>
+        <p>Storing in warehouses or collection centers for bulk recycling.</p>
+      </section>
+
+      <section id="hazardous">
+        <h2>Hazardous Storage</h2>
+        <p>Special containment for batteries and toxic materials to prevent leaks.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function logout() {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

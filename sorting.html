@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Techniques</title>
+  <link rel="stylesheet" href="tutorialmanagements.css">
+</head>
+<body>
+  <header>
+    <div class="Logo">E-Ways</div>
+    <nav>
+      <a href="maindashboard.html">Home</a>
+      <a href="tutorialmanagement.html" class="active">Tutorial</a>
+      <a href="marketplace.html">Market</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="actions">
+      <div class="Profile"><a href="userprofile.html">Profile</a></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Sorting Types</h3>
+      <ul>
+        <li><a href="#manual">Manual Sorting</a></li>
+        <li><a href="#mechanical">Mechanical Sorting</a></li>
+        <li><a href="#automated">Automated Sorting</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="manual">
+        <h2>Manual Sorting</h2>
+        <p>Workers separate e-waste by hand using bins and containers for plastics, metals, and glass.</p>
+      </section>
+
+      <section id="mechanical">
+        <h2>Mechanical Sorting</h2>
+        <p>Uses conveyor belts, shredders, and magnets to sort materials efficiently.</p>
+      </section>
+
+      <section id="automated">
+        <h2>Automated Sorting</h2>
+        <p>Advanced systems use sensors, AI, and robotics to identify and separate components.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function logout() {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
