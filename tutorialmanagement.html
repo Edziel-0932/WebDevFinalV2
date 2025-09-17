@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="tutorialmanagement.css">
+</head>
+
+<body>
+  <header>
+    <div class="Logo">E-Ways</div>
+
+    <nav>
+      <a href="maindashboard.html">Home</a>
+      <a href="tutorialmanagement.html">Tutorial</a>
+      <a href="marketplace.html">Market</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="help.html">Help</a>
+    </nav>
+
+    <div class="actions">
+      <div class="Profile"><a href="userprofile.html">Profile</a></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h2>General Tutorials</h2>
+    <p>Browse our tutorials on managing and reducing electronic wastes, from sorting to recycling responsibly.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Get Started with Sorting</h3>
+        <p>Learn how to separate electronic wastes into categories such as plastics, metals, and reusable parts.</p>
+        <span class="tag">Sorting</span>
+      </div>
+
+      <div class="card">
+        <h3>Safe Dismantling Techniques</h3>
+        <p>Understand the safe way of dismantling devices while protecting yourself from toxic components.</p>
+        <span class="tag">Dismantling</span>
+      </div>
+
+      <div class="card">
+        <h3>Proper Storage Basics</h3>
+        <p>Discover how to store e-waste safely to avoid environmental hazards before recycling.</p>
+        <span class="tag">Storage</span>
+      </div>
+
+      <div class="card">
+        <h3>Recycling & Reuse</h3>
+        <p>Explore various recycling processes and how old electronics can be repurposed effectively.</p>
+        <span class="tag">Recycling</span>
+      </div>
+
+      <div class="card">
+        <h3>Community Collection Programs</h3>
+        <p>Learn how to set up or join community e-waste collection drives for responsible disposal.</p>
+        <span class="tag">Community</span>
+      </div>
+    </div>
+  </main>
+  </div>
+
+  <script>
+    function logout() {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+
+</html>

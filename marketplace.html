@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market</title>
+  <link rel="stylesheet" href="marketplace.css">
+</head>
+
+<body>
+  <header>
+    <div class="Logo">E-Ways</div>
+
+    <nav>
+      <a href="maindashboard.html">Home</a>
+      <a href="tutorialmanagement.html">Tutorial</a>
+      <a href="marketplace.html">Market</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="help.html">Help</a>
+    </nav>
+
+    <div class="actions">
+      <div class="Profile"><a href="userprofile.html">Profile</a></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Electronic Waste Market</h1>
+    <p>Browse and manage collected electronic wastes.</p>
+  </section>
+
+  <section class="products">
+    <h2>Available E-Waste Items</h2>
+    <div class="product-grid">
+
+      <!-- Product Cards (with data-attributes) -->
+      <div class="product-card" data-title="Old Laptop" data-description="A used laptop in working condition." data-image="Oldgaminglaptop.jpg" data-contact="ChanVilla@Gmail.com">
+        <img src="Oldgaminglaptop.jpg" alt="Old Laptop">
+        <h3>Old Laptop</h3>
+      </div>
+
+      <div class="product-card" data-title="Used Mobile Phones" data-description="Assorted used mobile phones for reuse or parts." data-image="UsedMobilephones.webp" data-contact="RexJr@Gmail.com">
+        <img src="UsedMobilephones.webp" alt="Mobile Phones">
+        <h3>Used Mobile Phones</h3>
+      </div>
+
+      <div class="product-card" data-title="Wires & Cables" data-description="Mixed wires and charging cables." data-image="recycle-old-cables-chargers.webp" data-contact="Anthony@Gmail.com">
+        <img src="recycle-old-cables-chargers.webp" alt="Wires & Cables">
+        <h3>Wires & Cables</h3>
+      </div>
+
+      <div class="product-card" data-title="CRT Monitor" data-description="Old CRT monitor in usable condition." data-image="CRT-monitor-gaming-guide-07-550x309.webp" data-contact="Chiden@Gmail.com">
+        <img src="CRT-monitor-gaming-guide-07-550x309.webp" alt="CRT Monitor">
+        <h3>CRT Monitor</h3>
+      </div>
+
+      <div class="product-card" data-title="Motherboards" data-description="Collection of old motherboards (some working)." data-image="motherboards.jpg" data-contact="SomariGian@Gmail.com">
+        <img src="motherboards.jpg" alt="Motherboards">
+        <h3>Motherboards</h3>
+      </div>
+
+      <div class="product-card" data-title="Power Supplies" data-description="Various power supply units for reuse or recycling." data-image="powersupply.webp" data-contact="ShunDeler@Gmail.com">
+        <img src="powersupply.webp" alt="Power Supplies">
+        <h3>Power Supplies</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="market">
+    <h2>Marketplace</h2>
+    <button class="post-btn" onclick="openPostForm()">+ Post Your Item</button>
+  </section>
+
+  
+
+  <!-- Post Form Modal -->
+  <div id="postModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePostForm()">&times;</span>
+      <h2>Post Your Item</h2>
+      <form>
+        <input type="text" placeholder="Item Name" required>
+        <textarea placeholder="Item Description" required></textarea>
+        <input type="text" placeholder="Contact No or Email" required>
+        <input type="file" accept="image/*" required>
+        <button type="submit" class="submit-btn">Post Item</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Product Details Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProductModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="Product Image"
+        style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px;" />
+      <p id="modalDescription" style="margin-top: 15px;"></p>
+      <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+
+      <!-- Message Seller Button -->
+      <button id="messageButton" class="submit-btn" style="margin-top: 15px;">Message Seller</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openPostForm() {
+      document.getElementById("postModal").style.display = "block";
+    }
+
+    function closePostForm() {
+      document.getElementById("postModal").style.display = "none";
+    }
+
+    function closeProductModal() {
+      document.getElementById("productModal").style.display = "none";
+    }
+
+    function logout() {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+
+    // Product card click handling
+    document.querySelectorAll(".product-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const title = card.getAttribute("data-title");
+        const description = card.getAttribute("data-description");
+        const image = card.getAttribute("data-image");
+        const contact = card.getAttribute("data-contact");
+
+        // Populate modal content
+        document.getElementById("modalTitle").textContent = title;
+        document.getElementById("modalDescription").textContent = description;
+        document.getElementById("modalImage").src = image;
+        document.getElementById("modalContact").textContent = contact;
+
+       
+
+      
+        messageButton.onclick = () => {
+          window.open(contactLink, "_blank");
+        };
+
+        // Show modal
+        document.getElementById("productModal").style.display = "block";
+      });
+    });
+
+    // Close modals when clicking outside
+    window.addEventListener("click", e => {
+      if (e.target === document.getElementById("postModal")) {
+        closePostForm();
+      }
+      if (e.target === document.getElementById("productModal")) {
+        closeProductModal();
+      }
+      
+    });
+  </script>
+</body>
+
+</html>
